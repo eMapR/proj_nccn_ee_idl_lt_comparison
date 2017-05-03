@@ -1,0 +1,830 @@
+##########################################################################
+############################# jdb 2017/04/27 #############################
+##########################################################################
+
+##########################################################################
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_col_fix_10 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_10_fix_col/ 
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_10_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_10_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 3_make_vrts_from_tiles.py \
+/vol/v2/conus_tiles/tiles/ \
+/vol/v2/conus_tiles/vrts/lt_ee_conus_test/lt_ee_conus_nbr_20170417_ \
+nbr
+
+
+python 3_make_vrts_from_tiles.py \
+'/vol/v2/conus_tiles/topo_tiles/' \
+'/vol/v2/conus_tiles/vrts/srtm_dem_ee_conus_20170420_slope.vrt' \
+'*slope.bsq'
+
+python 3_make_vrts_from_tiles.py \
+'/vol/v2/conus_tiles/topo_tiles/' \
+'/vol/v2/conus_tiles/vrts/srtm_dem_ee_conus_20170420_aspect.vrt' \
+'*aspect.bsq'
+
+python 3_make_vrts_from_tiles.py \
+'/vol/v2/conus_tiles/topo_tiles/' \
+'/vol/v2/conus_tiles/vrts/srtm_dem_ee_conus_20170420_tpi.vrt' \
+'*tpi.bsq'
+
+python 3_make_vrts_from_tiles.py \
+'/vol/v2/conus_tiles/topo_tiles/' \
+'/vol/v2/conus_tiles/vrts/srtm_dem_ee_conus_20170420_roughness.vrt' \
+'*roughness.bsq'
+
+
+
+
+python 3_make_vrts_from_tiles.py \
+'/vol/v2/conus_tiles/tiles_topo/' \
+'/vol/v2/conus_tiles/vrts/srtm_dem_ee_conus_20170420_elevation.vrt' \
+'*elevation.bsq'
+
+python 3_make_vrts_from_tiles.py \
+'/vol/v2/conus_tiles/tiles_topo/' \
+'/vol/v2/conus_tiles/vrts/srtm_dem_ee_conus_20170420_tpi.vrt' \
+'*tpi.bsq'
+
+
+python 3_make_vrts_from_tiles.py \
+/vol/v2/conus_tiles/tiles_seg/ \
+/vol/v2/conus_tiles/vrts/lt_ee_conus_nbr_20170417_ \
+nbr
+
+
+##########################################################################
+############################# jdb 2017/04/25 #############################
+##########################################################################
+
+##########################################################################
+# make conus vrt
+
+python 3_make_vrts_from_tiles.py \
+/vol/v2/conus_tiles/tiles/ \
+/vol/v2/conus_tiles/vrts/lt_ee_conus_test/lt_ee_conus_nbr_20170417_ \
+nbr
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_col_11 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_11_fix_col/ 
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_col_12 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_12_fix_col/ 
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_11_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_11_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_12_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_12_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+##########################################################################
+############################# jdb 2017/04/24 #############################
+##########################################################################
+
+##########################################################################
+# make tiles from chunks for the the conus 00 chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_00_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_00_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_01_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_01_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_02_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_02_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_03_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_03_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_04_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_04_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_05_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_05_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_06_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_06_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_07_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_07_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_08_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_08_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_09_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_09_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_13_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_13_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_14_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_14_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_15_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_15_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_16_fix_col' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix_col/conus_tile_system_15_ee_chunk_16_epsg5070_fix_col.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+
+
+
+
+
+
+idl @lewi_labfilt_run.pro
+
+##########################################################################
+############################# jdb 2017/04/23 #############################
+##########################################################################
+
+##########################################################################
+# make vrt from all current tiles
+
+python 3_make_vrts_from_tiles.py \
+/vol/v2/conus_tiles/tiles/ \
+/vol/v2/conus_tiles/vrts/lt_ee_conus_test/lt_ee_conus_nbr_20170417_ \
+nbr
+
+##########################################################################
+# make tiles from chunks for the the conus 08 chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_08' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_08_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+##########################################################################
+# make tiles from chunks for the the conus 09 chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_09' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_09_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+##########################################################################
+# make tiles from chunks for the the conus 13_fix chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_13_fix' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/fix/conus_tile_system_15_ee_chunk_13_epsg5070_fix.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+##########################################################################
+# download chunks
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_01 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_01_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_02 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_02_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_03 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_03_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_05 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_05_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_06 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_06_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_07 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_07_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_08 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_08_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_09 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_09_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_15 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_15_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_16 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_16_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_00 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_00_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_04 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_04_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_col_13 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_13_fix_col/
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_col_14 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_14_fix_col/
+
+
+
+
+
+
+
+
+
+
+
+
+##########################################################################
+############################# jdb 2017/04/22 #############################
+##########################################################################
+
+##########################################################################
+# make vrt from all current tiles
+
+python 3_make_vrts_from_tiles.py \
+/vol/v2/conus_tiles/tiles/ \
+/vol/v2/conus_tiles/vrts/lt_ee_conus_test/lt_ee_conus_nbr_20170417_ \
+nbr
+
+##########################################################################
+# make tiles from chunks for the the conus 06 chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_06' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_06_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+##########################################################################
+# make tiles from chunks for the the conus 06 chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_07' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_07_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+##########################################################################
+############################# jdb 2017/04/21 #############################
+##########################################################################
+
+##########################################################################
+# make tiles from chunks for the the conus 05 chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_05' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_05_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+python 1_get_chunks_from_gdrive.py \
+emapr_conus_nbr_chunks_all_stack_13 \
+/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_13_fix
+
+
+
+
+##########################################################################
+############################# jdb 2017/04/20 #############################
+##########################################################################
+
+##########################################################################
+# make tiles from chunks for the the conus 04 chunk region
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_04' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_04_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+##########################################################################
+# add tile name to geojson files in QGIS field calculator ee tile chunk 03,
+# 04
+
+CASE
+WHEN "id" < 10 THEN concat('000',to_string("id"))
+WHEN "id" >= 10 AND "id" < 100 THEN concat('00',to_string("id"))
+WHEN "id" >= 100 AND "id" < 1000 THEN concat('0',to_string("id"))
+WHEN "id" >= 1000 THEN to_string("id")
+END
+
+CASE
+WHEN "id" < 10 THEN concat('0',to_string("id"))
+WHEN "id" >= 10 THEN to_string("id")
+END
+
+##########################################################################
+# download dems
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_00 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_00
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_01 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_01
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_02 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_02
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_03 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_03
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_04 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_04
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_05 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_05
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_06 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_06
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_07 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_07
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_08 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_08
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_09 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_09
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_10 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_10
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_11 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_11
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_12 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_12
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_13 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_13
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_14 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_14
+
+python 1_get_chunks_from_gdrive.py \
+conus_srtm_dem_chunk_15 \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem_15
+
+##########################################################################
+# make the dem tiles
+
+python 2_make_tiles_from_chunks.py \
+/vol/v2/conus_tiles/staging/gDrive/srtm_dem \
+/vol/v2/conus_tiles/topo_tiles \
+/vol/v1/general_files/datasets/spatial_data/conus_tile_system/conus_tile_system_15_sub_epsg5070.geojson \
+srtm_dem_ee_conus_20170420 \
+EPSG:5070 \
+keep
+
+##########################################################################
+# make elevation vrt
+
+python 3_make_vrts_from_tiles.py \
+/vol/v2/conus_tiles/topo_tiles \
+/vol/v2/conus_tiles/vrts/srtm_dem_ee_conus_20170420_elevation.vrt \
+'*elevation.bsq'
+
+
+##########################################################################
+# make slope tiles
+
+python 4_make_other_topo_layers_from_tiles.py \
+/vol/v2/conus_tiles/topo_tiles \
+slope
+
+##########################################################################
+# make aspect tiles
+
+python 4_make_other_topo_layers_from_tiles.py \
+/vol/v2/conus_tiles/topo_tiles \
+aspect
+
+##########################################################################
+# make slope vrt
+
+python 3_make_vrts_from_tiles.py \
+/vol/v2/conus_tiles/topo_tiles \
+/vol/v2/conus_tiles/vrts/srtm_dem_ee_conus_20170420_aspect.vrt \
+'*aspect.bsq'
+
+
+##########################################################################
+############################# jdb 2017/04/19 #############################
+##########################################################################
+
+##########################################################################
+# download ee conus lt chunks from chunk region 09 - previous attempt 
+# failed
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_09 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_09/
+
+
+##########################################################################
+# make tiles from chunks for the the conus 02 chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_02' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_02_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+##########################################################################
+# make tiles from chunks for the the conus 03 chunk region
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_03' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_03_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+
+##########################################################################
+# add tile name to geojson files in QGIS field calculator
+
+CASE
+WHEN "id" < 10 THEN concat('000',to_string("id"))
+WHEN "id" >= 10 AND "id" < 100 THEN concat('00',to_string("id"))
+WHEN "id" >= 100 AND "id" < 1000 THEN concat('0',to_string("id"))
+WHEN "id" >= 1000 THEN to_string("id")
+END
+
+
+
+
+
+##########################################################################
+############################# jdb 2017/04/18 #############################
+##########################################################################
+
+##########################################################################
+# make tiles from chunks for the the conus 01 chunk region
+
+python 2_make_tiles_from_chunks.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_01' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_01_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+
+##########################################################################
+# download ee conus lt chunks from chunk region 09
+
+python 1_get_chunks_from_gdrive.py emapr_conus_nbr_chunks_all_stack_09 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_09/
+
+
+
+
+##########################################################################
+############################# jdb 2017/07/14 #############################
+##########################################################################
+
+##########################################################################
+# run idl label on gee vs idl data set for the 4 parks
+
+idl
+@lewi_labfilt_run.pro
+
+idl
+@olym_labfilt_run.pro
+
+idl
+@noca_labfilt_run.pro
+
+idl
+@mora_labfilt_run.pro
+
+##########################################################################
+# make vrt files from idl_2012
+
+python make_idl_2012_vrt.py \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_greatest_fast_dist_mmu11.txt \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_greatest_fast_dist_mmu11.vrt
+
+python make_idl_2012_vrt.py \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_greatest_fast_dist_ftv_context.txt \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_greatest_fast_dist_ftv_context.vrt
+
+python make_idl_2012_vrt.py \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_greatest_fast_dist.txt \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_greatest_fast_dist.vrt
+
+python make_idl_2012_vrt.py \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_vertyrs.txt \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_vertyrs.vrt
+
+python make_idl_2012_vrt.py \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_vertvals.txt \
+/vol/v1/proj/nccn/gee_idl_lt_compare/raster/idl_2012_vrt/idl_2012_vertvals.vrt
+
+
+
+python gee_stack_2_idl_format.py \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/lewi/corrected_nbr_15_offset_normal/nccn_lewi_gee_vs_idl_all_stack_normal.tif' \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/lewi/corrected_nbr_15_offset_normal' \
+'test' \
+'nbr' \
+7 \
+1984 \
+2012 \
+'EPSG:5070' \
+'keep'
+
+
+####################################
+
+python 1_gdrive_get.py emapr_conus_nbr_chunks_all_stack_00 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_00/ 
+
+python gee_stack_2_chunk_vrts.py /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_00/ /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_00/conus_all_stack_00.vrt
+
+python gee_stack_2_chunk_bsq.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_00/conus_all_stack_00.vrt' \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_00_bsq/' \
+'test' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070'
+
+python 1_gdrive_get.py emapr_conus_nbr_chunks_all_stack_01 /vol/v2/conus_tiles/staging/gDrive/nbr_emapr_01/
+
+######################################################################################
+python gee_stack_2_chunk_bsq.py \
+'/vol/v2/conus_tiles/staging/gDrive/nbr_emapr_00' \
+'/vol/v2/conus_tiles/tiles' \
+'/vol/v1/general_files/datasets/spatial_data/conus_tile_system/ee_conus_chunks/conus_tile_system_15_ee_chunk_00_epsg5070.geojson' \
+'lt_ee_conus_nbr_20170417' \
+'nbr' \
+7 \
+1984 \
+2016 \
+'EPSG:5070' \
+'keep'
+
+
+
+##########################################################################
+############################# jdb 2017/07/13 #############################
+##########################################################################
+
+##########################################################################
+# translate gee lt tif to bsq
+
+python gee_2_idl_format_change.py \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/lewi' \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/lewi' \
+'nccn_lewi_gee_vs_idl' \
+'nbr' \
+'EPSG:5070' \
+'delete'
+
+python gee_2_idl_format_change.py \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/mora' \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/mora' \
+'nccn_mora_gee_vs_idl' \
+'nbr' \
+'EPSG:5070' \
+'delete'
+
+python gee_2_idl_format_change.py \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/noca' \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/noca' \
+'nccn_noca_gee_vs_idl' \
+'nbr' \
+'EPSG:5070' \
+'delete'
+
+python gee_2_idl_format_change.py \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/olym' \
+'/vol/v1/proj/nccn/gee_idl_lt_compare/raster/olym' \
+'nccn_olym_gee_vs_idl' \
+'nbr' \
+'EPSG:5070' \
+'delete'
+
+
+##########################################################################
+# set IDL path
+
+idl
+PREF_SET, 'IDL_PATH', expand_path('+/vol/v1/code/landtrendr/EE_LT-IDL_patchify')+':<IDL_DEFAULT>', /COMMIT
+print, pref_get('idl_path')
+
+##########################################################################
+# unzip YOD for greatest fast - copy from ftp/disturbance/nwfp
+# wanted to the setting used in label script metadata
+
+unzip greatest_fast_disturbance_YOD.zip
+
+
